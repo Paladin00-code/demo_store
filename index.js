@@ -26,7 +26,8 @@ async function start(){
             'mongodb+srv://alex:2012@cluster0.o4aom.mongodb.net/shop?retryWrites=true&w=majority',
             {
             useNewUrlParser: true,
-            useFindAndModify: false
+            useFindAndModify: false,
+            useUnifiedTopology: true
         })
         app.listen(PORT, () => {
         console.log('\n==Server has been started==')
