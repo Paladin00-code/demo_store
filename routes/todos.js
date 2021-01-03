@@ -2,13 +2,8 @@ const { Router } = require('express')
 const Todo = require('../models/Todo')
 const router = Router()
 
-<<<<<<< HEAD
 router.get('/', async (req, res) => {
   const todos = await Todo.find({}).lean()
-=======
-router.get('/', async (req,res) =>{
-    const todos  = await Todo.find({}).lean()
->>>>>>> 5c0759d9bf0fdf53077f8a316c277da37f2eed49
 
   res.render('index', {
     title: 'Todos list',
