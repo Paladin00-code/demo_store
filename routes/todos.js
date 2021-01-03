@@ -1,9 +1,9 @@
 const { Router } = require('express')
-const Todo = require('../models/todo')
+const Todo = require('../models/Todo')
 const router = Router()
 
 router.get('/', async (req, res) => {
-  const todos = await todo.find({}).lean()
+  const todos = await Todo.find({}).lean()
 
   res.render('index', {
     title: 'Todos list',
@@ -29,7 +29,7 @@ router.post('/create', async (req, res) => {
 })
 
 router.post('/complete', async (req, res) => {
-  const todo = await todo.findById(req.body.id)
+  const todo = await Todo.findById(req.body.id)
 
   todo.completed = !!req.body.completed
   await todo.save()

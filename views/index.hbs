@@ -11,11 +11,11 @@
         <span class="completed">{{title}}</span>
         {{else}}
         <input type="checkbox" name="completed">
-        <span>111{{title}}</span>
+        <span>{{title}}</span>
         {{/if}}
 
         <input type="hidden" value="{{_id}}" name="id">
-        
+
         <button class="btn btn-small" type="submit">Save</button>
       </label>
     </form>
